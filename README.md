@@ -78,4 +78,12 @@ print(res["response"])
 4. Run tests: `pytest`.
 5. Push and open a Pull Request.
 
+📄 Licence
+
+Ce projet est distribué sous la Diamajax License v1.0 © 2025 Matthieu Ouvrard (aka Diamajax).
+Pour usage commercial, contactez l’auteur : diamajax@gmail.com.
+
+Voir le fichier LICENSE pour le texte complet.
+
+
 
