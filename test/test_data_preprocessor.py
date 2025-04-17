@@ -3,21 +3,16 @@ import pandas as pd
 import pytest
 from diamajax_utils.data_preprocessor import DataPreprocessor
 
-@pytest.fixture
-def df():
-    # DataFrame simple
-    return pd.DataFrame({
-        "a": [1, 2, None],
-        "b": ["x", None, "z"]
-    })
+def test_preprocess_list_input():
+    data = [[1, 2], [3, 4], [5, 6]]
+    dp = DataPreprocessor(normalize=True, standardize=True)
+    out = dp.preprocess(data)
+    # Après standardisation puis normalisation, chaque colonne ∈ [0,1]
+    assert isinstance(out, np.ndarray)
+    assert out.shape == (3, 2)
+    assert np.all(out >= 0) and np.all(out <= 1)
 
-def test_clean_and_encode(df):
-    proc = DataPreprocessor()
-    cleaned = proc.clean_missing(df)
-    # Plus de NaN en a ou b
-    assert not cleaned.isnull().any().any()
-
-    encoded = proc.encode_categorical(cleaned, columns=["b"])
-    # colonne b transformée
-    assert "b" in encoded.columns
-    assert encoded["b"].dtype == int or encoded["b"].dtype == np.int64
+def test_preprocess_invalid_input():
+    dp = DataPreprocessor()
+    with pytest.raises(ValueError):
+        dp.preprocess([1, 2, 3])  # pas un 2D
