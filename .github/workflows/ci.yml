@@ -30,3 +30,18 @@ jobs:
 
       - name: Run pytest
         run: pytest --cov=diamajax_utils
+  steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install package in editable mode
+      run: pip install -e .
+
+    - name: Install dev dependencies
+      run: pip install -r requirements-dev.txt
+
+    - name: Run pytest
+      run: pytest --cov=diamajax_utils
+
