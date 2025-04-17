@@ -10,7 +10,7 @@ Passe direct en production-ready mode avec des modules intelligents pour :
 
 📊 Dashboards interactifs auto-générés
 
-⚡ Cache & preprocessing pour des workflows fluides
+⚡ preprocessing pour des workflows fluides
 
 🛠️ Plug & play AI pipelines – tout est modulaire, tout est scalable
 
