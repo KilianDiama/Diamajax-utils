@@ -18,6 +18,6 @@ def test_delete(cache):
     key, value = "to_del", [1, 2, 3]
     cache.set(key, value)
     cache.delete(key)
-    assert not cache.exists(key)
-    with pytest.raises(FileNotFoundError):
-        _ = cache.get(key)
+   assert not cache.exists(key)
+   # get() doit renvoyer None quand la clé a été supprimée
+   assert cache.get(key) is None
