@@ -5,10 +5,7 @@ from typing import Any, Dict, List
 from diamajax_utils.onnx_wrapper import ONNXModelWrapper
 from diamajax_utils.dashboard_generator import DashboardGenerator
 
-# Si tu as des modules séparés pour la DB et le NLP, importe-les ici :
-# from diamajax_utils.db import PostgreSQLManager, MongoDBManager
-# from diamajax_utils.nlp import NLPProcessor, SentimentAnalyzer
-# from diamajax_utils.data_organizer import DataOrganizer
+
 
 logger = logging.getLogger(__name__)
 
