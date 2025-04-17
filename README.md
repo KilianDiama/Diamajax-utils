@@ -1,100 +1,93 @@
-⚙️ Diamajax-utils — Build AI like a Pro
-Unleash powerful AI pipelines with zero hassle.
+Diamajax-utils 🚀
 
-Diamajax-utils est une boîte à outils Python pensée pour les devs et data scientists qui veulent aller au-delà des POCs.
-Passe direct en production-ready mode avec des modules intelligents pour :
+Une boîte à outils Python performante et modulaire conçue pour accélérer la mise en production de vos modèles d'intelligence artificielle.
 
-🔥 Inférence ONNX optimisée (multi-device, warmup, validation)
+💡 Pourquoi Diamajax-utils ?
 
-🧠 Clustering avancé (UMAP + KMeans/DBSCAN/HDBSCAN)
+Diamajax-utils simplifie le processus souvent complexe du déploiement d'IA grâce à des modules pré-conçus, performants et faciles à intégrer.
 
-📊 Dashboards interactifs auto-générés
+🚀 Fonctionnalités clés
 
-⚡ preprocessing pour des workflows fluides
+✅ Inférence ONNX
 
-🛠️ Plug & play AI pipelines – tout est modulaire, tout est scalable
+Inférence rapide et optimisée
 
-Tu veux livrer plus vite, mieux, et sans te battre avec les détails techniques ?
-Diamajax-utils te file les clés.
+Gestion multi-device (CPU/GPU)
 
+Warm-up intégré pour performances optimales
 
+Validation automatique des modèles
 
----
+📊 Clustering avancé
 
-## Installation
+Intégration efficace de UMAP
 
-Install from PyPI:
+Algorithmes variés : KMeans, DBSCAN, HDBSCAN
 
-```bash
+Visualisation rapide et intuitive
+
+📈 Dashboards interactifs
+
+Génération automatique
+
+Compatible Streamlit et Dash
+
+Prêt à l'emploi, personnalisable en quelques clics
+
+⚡ Gestion du Cache et Prétraitement
+
+Accélération de workflows via cache intelligent
+
+Prétraitement simplifié et modulaire
+
+Réutilisation facile des transformations de données
+
+📦 Installation
+
+Installation facile avec PyPI :
+
 pip install diamajax-utils
-```
 
-Or clone and install locally:
+🚨 Exemples d'utilisation
 
-```bash
-git clone https://github.com/KilianDiama/Diamajax-utils.git
-cd Diamajax-utils
-pip install .
-```
+from diamajax_utils.inference import ONNXInference
 
----
+# Chargement et inférence d'un modèle ONNX
+model = ONNXInference(model_path="model.onnx", device="cuda")
+result = model.predict(input_data)
 
-## Quickstart
+Plus d'exemples dans le dossier examples/.
 
-### ONNXModelWrapper
+🛠️ Contribution
 
-```python
-from diamajax_utils import ONNXModelWrapper
+Votre contribution est bienvenue !
 
-# Load model on GPU if available
-wrapper = ONNXModelWrapper("path/to/model.onnx", device_preference="auto")
-# Inspect inputs/outputs
-print(wrapper.get_model_metadata())
-# Warm up
-wrapper.warmup({"input": dummy_array})
-# Run inference
-outputs = wrapper.predict({"input": input_array})
-```
+Forkez ce dépôt
 
-### ClusteringService
+Créez une branche de fonctionnalité (git checkout -b feature/AmazingFeature)
 
-```python
-from diamajax_utils import ClusteringService
+Commitez vos modifications (git commit -m 'Add some AmazingFeature')
 
-clust = ClusteringService(n_neighbors=15, min_dist=0.1)
-# Reduce high-dimensional embeddings
-reduced = clust.reduce_dimensions(embeddings)
-# Cluster and visualize
-result = clust.apply_clustering(reduced, method="hdbscan", min_cluster_size=5)
-```
+Poussez votre branche (git push origin feature/AmazingFeature)
 
-### NextGenAISystem
+Ouvrez une pull request
 
-```python
-from diamajax_utils import NextGenAISystem
+📖 Documentation
 
-system = NextGenAISystem(use_postgres=False)
-# Process a single message
-res = await system.process_message("user1", "Hello, how are you?")
-print(res["response"])
-```
+Consultez la documentation complète ici.
 
----
+🧪 Tests
 
-## Contributing
+Exécutez les tests avec Pytest :
 
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature/YourFeature`.
-3. Commit your changes: `git commit -m "Add new feature"`.
-4. Run tests: `pytest`.
-5. Push and open a Pull Request.
+pytest tests/
 
 📄 Licence
 
-Ce projet est distribué sous la Diamajax License v1.0 © 2025 Matthieu Ouvrard (aka Diamajax).
-Pour usage commercial, contactez l’auteur : diamajax@gmail.com.
+Distribué sous licence . Voir LICENSE V1 pour plus d'informations.
 
-Voir le fichier LICENSE pour le texte complet.
+✨ Contacts
 
+Kilian Diama : GitHub
 
-
+⭐️ Si vous appréciez ce projet, une étoile ⭐️ sur GitHub serait très appréciée !
