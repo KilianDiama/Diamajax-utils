@@ -1,12 +1,23 @@
-# diamajax-utils
+⚙️ Diamajax-utils — Build AI like a Pro
+Unleash powerful AI pipelines with zero hassle.
 
-[![PyPI version](https://img.shields.io/pypi/v/diamajax-utils)](https://pypi.org/project/diamajax-utils) [![Build Status](https://github.com/KilianDiama/Diamajax-utils/workflows/CI/badge.svg)](https://github.com/KilianDiama/Diamajax-utils/actions) [![License](https://img.shields.io/github/license/KilianDiama/Diamajax-utils)](LICENSE)
+Diamajax-utils est une boîte à outils Python pensée pour les devs et data scientists qui veulent aller au-delà des POCs.
+Passe direct en production-ready mode avec des modules intelligents pour :
 
-**A Python package providing key AI utilities for production-ready workflows**:
+🔥 Inférence ONNX optimisée (multi-device, warmup, validation)
 
-- **ONNXModelWrapper**: simplified multi-device ONNX inference with warmup and input validation.
-- **ClusteringService**: UMAP dimensionality reduction + clustering (KMeans, DBSCAN, HDBSCAN) + interactive visualization.
-- **NextGenAISystem**: end-to-end AI pipeline (NLP preprocessing, ONNX inference, caching, storage, dashboards).
+🧠 Clustering avancé (UMAP + KMeans/DBSCAN/HDBSCAN)
+
+📊 Dashboards interactifs auto-générés
+
+⚡ Cache & preprocessing pour des workflows fluides
+
+🛠️ Plug & play AI pipelines – tout est modulaire, tout est scalable
+
+Tu veux livrer plus vite, mieux, et sans te battre avec les détails techniques ?
+Diamajax-utils te file les clés.
+
+
 
 ---
 
