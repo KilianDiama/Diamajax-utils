@@ -1,12 +1,13 @@
 import os
 import json
+import logging
 from typing import Any, Optional
 
 from redis import Redis
 from cachetools import TTLCache
 
-import logging
 logger = logging.getLogger(__name__)
+
 
 class RedisCacheManager:
     """
