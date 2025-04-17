@@ -1,2 +1,13 @@
 pytest
 pytest-cov
+redis
+cachetools
+numpy
+umap-learn
+scikit-learn
+hdbscan
+matplotlib
+plotly
+selenium
+pillow
+onnxruntime
