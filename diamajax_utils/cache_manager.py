@@ -162,4 +162,22 @@ class RedisCacheManager:
         except Exception as e:
             logger.error(f"Error clearing local cache: {e}")
 
+    def set(self, key: str, value: Any):
+        """Alias de set_cache pour les tests."""
+        return self.set_cache(key, value)
+
+    def get(self, key: str) -> Any:
+        """Alias de get_cache pour les tests."""
+        return self.get_cache(key)
+
+    def delete(self, key: str):
+        """Alias de delete_cache pour les tests."""
+        return self.delete_cache(key)
+
+    def exists(self, key: str) -> bool:
+        """Existence rapide : True si get_cache ne renvoie pas None."""
+        return self.get_cache(key) is not None
+
+# N’oublie pas l’alias global si tu l’as déjà mis :
 CacheManager = RedisCacheManager
+
