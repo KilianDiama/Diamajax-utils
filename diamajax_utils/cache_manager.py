@@ -10,6 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 class RedisCacheManager:
+
     """
     Gère un cache distribué avec Redis et fallback local.
     """
@@ -160,3 +161,5 @@ class RedisCacheManager:
             logger.info("All local fallback cache cleared.")
         except Exception as e:
             logger.error(f"Error clearing local cache: {e}")
+
+CacheManager = RedisCacheManager
