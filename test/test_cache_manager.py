@@ -1,7 +1,7 @@
 import os
 import pickle
 import pytest
-from diamajax_utils.cache_manager import CacheManager
+from diamajax_utils.cache_manager import RedisCacheManager as CacheManager
 
 @pytest.fixture
 def cache(tmp_path):
