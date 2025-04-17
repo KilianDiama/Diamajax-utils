@@ -78,11 +78,4 @@ print(res["response"])
 4. Run tests: `pytest`.
 5. Push and open a Pull Request.
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before contributing.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
