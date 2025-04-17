@@ -3,14 +3,13 @@ import io
 import logging
 from typing import Dict
 
+from selenium import webdriver
+from PIL import Image
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-# Pour l’export en image
-from selenium import webdriver
-from PIL import Image
-
 logger = logging.getLogger(__name__)
+
 
 class DashboardGenerator:
     """
