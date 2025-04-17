@@ -1,8 +1,9 @@
 pytest
 pytest-cov
+pandas
+numpy
 redis
 cachetools
-numpy
 umap-learn
 scikit-learn
 hdbscan
